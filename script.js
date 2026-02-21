@@ -373,7 +373,7 @@ const parcoursData = {
                 La seconde approche a montré une meilleure capacité de prédiction sur les données spectrales. Ce travail a donné lieu à la co-rédaction d'un article interne présentant les résultats de l'étude.
             </p>
 
-            <h3 style="color: var(--accent-tertiary); margin-bottom: 1rem;">Conclusion et perspectives</h3>
+            <h3 style="color: var(--accent-tertiary); margin-bottom: 1rem;">Conclusion</h3>
             <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
                 Ce stage m'a permis de mettre en application et de renforcer mes compétences en prétraitement de données, apprentissage automatique, évaluation de modèles et visualisation des résultats, tout en acquérant une expérience pratique dans l'application de méthodes d'apprentissage automatique à des données industrielles complexes.
             </p>
