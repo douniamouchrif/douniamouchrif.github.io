@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dounia Mouchrif — Data Scientist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Barre de progression -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">Dounia Mouchrif</div>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#formation">Formation & Expériences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-name">Dounia</span>
+                <span class="hero-name">Mouchrif</span>
+            </h1>
+            <div class="hero-label">Data Scientist | Machine Learning | IA </div>
+            <p class="hero-subtitle">Transformer les données en décisions et en valeur concrète</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">Me contacter</a>
+                <a href="cv.pdf" download class="btn btn-secondary">
+                    <i class="fas fa-download"></i> Télécharger mon CV
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">À propos</h2>
+            </div>
+            <div class="about-content about-content--centered">
+                <div class="about-text about-text--full">
+                    <p class="lead">Passionnée par l’analyse de données et la modélisation, j’aime faire parler les
+                        données, les structurer et les transformer en solutions concrètes.</p>
+                    <p class="lead">Au fil de mon parcours, j’ai développé une approche rigoureuse de la data science :
+                        comprendre
+                        le problème, explorer les données en profondeur, concevoir des modèles adaptés et en évaluer la
+                        performance avec exigence.</p>
+                    <p class="lead">Aujourd’hui, je souhaite contribuer à des projets stimulants où la data devient un
+                        véritable
+                        levier stratégique au service de la décision et de l’innovation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header centered">
+                <h2 class="section-title">Compétences</h2>
+            </div>
+
+            <div class="skills-wrapper">
+                <!-- Compétences Techniques -->
+                <div class="skill-block tech-block">
+                    <div class="skill-block-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Compétences techniques</h3>
+                    </div>
+                    <div class="skill-block-content">
+                        <div class="skill-group">
+                            <h4>Langages</h4>
+                            <div class="tags">
+                                <span>Python</span>
+                                <span>R</span>
+                                <span>SQL</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h4>ML / DL & Visualisation</h4>
+                            <div class="tags">
+                                <span>NumPy</span>
+                                <span>Pandas</span>
+                                <span>SciPy</span>
+                                <span>Scikit-learn</span>
+                                <span>PyTorch</span>
+                                <span>TensorFlow</span>
+                                <span>Matplotlib</span>
+                                <span>Seaborn</span>
+                                <span>Plotly</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Dashboards</h4>
+                            <div class="tags">
+                                <span>Streamlit</span>
+                                <span>Dash</span>
+                                <span>Shiny</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Bases de données</h4>
+                            <div class="tags">
+                                <span>PostgreSQL</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Outils & Plateformes</h4>
+                            <div class="tags">
+                                <span>Dataiku</span>
+                                <span>Jupyter Notebook</span>
+                                <span>Git / GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grille 2 colonnes pour Data Science et Soft Skills -->
+                <div class="skills-grid-2">
+                    <!-- Data Science -->
+                    <div class="skill-block datascience-block">
+                        <div class="skill-block-header">
+                            <i class="fas fa-brain"></i>
+                            <h3>Data Science</h3>
+                        </div>
+                        <div class="skill-block-content">
+                            <ul class="skill-bullets">
+                                <li>Prétraitement et analyse exploratoire des données</li>
+                                <li>Entraînement, optimisation et évaluation de modèles supervisés et non supervisés
+                                </li>
+                                <li>Visualisation de données et dashboards interactifs</li>
+                                <li>Analyse statistique et tests d’hypothèses</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Compétences Transversales -->
+                    <div class="skill-block soft-block">
+                        <div class="skill-block-header">
+                            <i class="fas fa-users"></i>
+                            <h3>Compétences transversales</h3>
+                        </div>
+                        <div class="skill-block-content">
+                            <ul class="skill-bullets">
+                                <li>Esprit d'équipe</li>
+                                <li>Adaptabilité</li>
+                                <li>Autonomie</li>
+                                <li>Capacité d'apprentissage</li>
+                                <li>Curiosité</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section - HIGHLIGHT -->
+    <section id="projects" class="projects-section">
+        <div class="container-wide">
+            <div class="section-header centered">
+                <h2 class="section-title">Projets</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Projet 1 - Datathon -->
+                <div class="project-card" data-project="1">
+                    <div class="project-image">
+                        <img src="images/logo_BM.png" alt="Datathon Bordeaux Métropole" class="project-img">
+                        <div class="project-overlay">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Datathon Bordeaux Métropole</h3>
+                        <p class="project-description">Datathon Métrodata - 48h pour transformer des données en
+                            indicateurs clés des transitions économiques...</p>
+                        <div class="project-tech">
+                            <span>Travail d'équipe</span>
+                            <span>Analyse statistique</span>
+                            <span>Visualisation de données</span>
+                        </div>
+                        <span class="timeline-cta">Voir plus →</span>
+                    </div>
+                </div>
+
+                <!-- Projet 2 - Carrefour -->
+                <div class="project-card" data-project="2">
+                    <div class="project-image">
+                        <img src="images/AFCarrefour.png" alt="Défi IA Carrefour" class="project-img">
+                        <div class="project-overlay">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Défi IA - Carrefour - Prédiction du réachat de produits</h3>
+                        <p class="project-description">Défi IA organisé en partenariat entre l’Université de Bordeaux et
+                            l’Analytics Factory de Carrefour France...</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>LightGBM</span>
+                            <span>Feature Engineering</span>
+                        </div>
+                        <span class="timeline-cta">Voir plus →</span>
+                    </div>
+                </div>
+
+                <!-- Projet 3 - Classification satellite -->
+                <div class="project-card" data-project="3">
+                    <div class="project-image">
+                        <img src="images/satellite.png" alt="Classification images satellitaires" class="project-img">
+                        <div class="project-overlay">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Classification d'images satellitaires</h3>
+                        <p class="project-description">L'objectif était de concevoir et de comparer plusieurs modèles de
+                            classification d'images à partir d'images satellite afin de détecter automatiquement la
+                            présence d'éoliennes...</p>
+                        <div class="project-tech">
+                            <span>PyTorch</span>
+                            <span>CNN</span>
+                            <span>Transfer Learning</span>
+                        </div>
+                        <span class="timeline-cta">Voir plus →</span>
+                    </div>
+                </div>
+
+                <!-- Projet 4 - TER linguistique -->
+                <div class="project-card" data-project="4">
+                    <div class="project-image">
+                        <img src="images/texte.png" alt="TER Analyse linguistique" class="project-img">
+                        <div class="project-overlay">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Analyse statistique d'une enquête linguistique (enquête Bourciez)</h3>
+                        <p class="project-description">Étude statistique de l'enquête linguistique menée par Édouard
+                            Bourciez à la fin du XIXᵉ siècle...</p>
+                        <div class="project-tech">
+                            <span>R</span>
+                            <span>Shiny</span>
+                            <span>Clustering</span>
+                        </div>
+                        <span class="timeline-cta">Voir plus →</span>
+                    </div>
+                </div>
+
+                <!-- Projet 5 - Dashboard Londres -->
+                <div class="project-card" data-project="5">
+                    <div class="project-image">
+                        <img src="images/app_london2.png" alt="Dashboard urbain Londres" class="project-img">
+                        <div class="project-overlay">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Dashboard interactif à partir de données ouvertes de la ville de
+                            Londres</h3>
+                        <p class="project-description">Exploitation des données ouvertes de la ville
+                            de Londres afin d'analyser et de visualiser les dynamiques urbaines dans les domaines du
+                            logement, des transports et de la santé...</p>
+                        <div class="project-tech">
+                            <span>Open Data</span>
+                            <span>Dash</span>
+                            <span>Plotly</span>
+                        </div>
+                        <span class="timeline-cta">Voir plus →</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formation & Expériences Section (fusionnée) -->
+    <section id="formation" class="formation-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Formation & Expériences</h2>
+            </div>
+
+            <div class="timeline">
+
+                <!-- Stage Topnir - Expérience -->
+                <div class="timeline-item experience clickable" data-parcours="exp-1">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025</div>
+                        <h3 class="timeline-title">Stage de fin d'études - Data Science</h3>
+                        <h4 class="timeline-company">Topnir Systems</h4>
+                        <p class="timeline-description">Exploration et comparaison de méthodes ML pour l'analyse de
+                            produits pétroliers à partir de données spectrales.</p>
+                        <div class="project-tech">
+                            <span>Autonomie</span>
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>Deep Learning</span>
+                            <span>Méthodes statistiques</span>
+                        </div>
+                        <span class="timeline-cta">Voir plus →</span>
+                    </div>
+                </div>
+
+                <!-- Master -->
+                <div class="timeline-item education clickable" data-parcours="edu-1">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023 - 2025</div>
+                        <h3 class="timeline-title">Master - CMI Ingénierie de la Statistique et de l'Informatique</h3>
+                        <h4 class="timeline-company">Université de Bordeaux</h4>
+                    </div>
+                </div>
+
+                <!-- Erasmus -->
+                <div class="timeline-item education clickable" data-parcours="edu-2">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023</div>
+                        <h3 class="timeline-title">Programme Erasmus - Mathématiques et Informatique</h3>
+                        <h4 class="timeline-company">Université Libre de Bruxelles</h4>
+                        <p class="timeline-description">Semestre d'échange en Belgique réalisé en troisième année.</p>
+                    </div>
+                </div>
+
+                <!-- Licence -->
+                <div class="timeline-item education clickable" data-parcours="edu-3">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020 - 2023</div>
+                        <h3 class="timeline-title">Licence - CMI Ingénierie de la Statistique et de l'Informatique
+                            (CMI ISI)</h3>
+                        <h4 class="timeline-company">Université de Bordeaux</h4>
+                        <p class="timeline-description">
+                            Parcours Licence + Master renforcé sur 5 ans (équivalent à 6 années d’études, 360 ECTS),
+                            reconnu par le
+                            <a href="https://reseau-figure.fr/les-cursus-master-en-ingenierie" target="_blank"
+                                rel="noopener noreferrer">
+                                Réseau Figure
+                            </a> (label CMI).
+                            Formation exigeante axée sur les statistiques, l’informatique et la data science
+                            (<a href="https://uf-mi.u-bordeaux.fr/cmi-isi/programme/" target="_blank"
+                                rel="noopener noreferrer">
+                                programme du CMI ISI
+                            </a>).
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Travaillons ensemble</h2>
+                <p class="section-description">Vous avez un projet passionnant ? Discutons-en !</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:douniamouchrif@outlook.com">douniamouchrif@outlook.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/dounia-mouchrif/"
+                                target="_blank">linkedin.com/in/douniamouchrif</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div>
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/douniamouchrif" target="_blank">github.com/douniamouchrif</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-download">
+                    <div class="cv-card">
+                        <i class="fas fa-file-pdf"></i>
+                        <h3>Télécharger mon CV</h3>
+                        <a href="CV/CV_Mouchrif_Dounia.pdf" download class="btn btn-cv">
+                            <i class="fas fa-download"></i>
+                            Télécharger
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Modals pour les projets -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Modal pour les expériences -->
+    <div id="experienceModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="experienceModalClose">&times;</span>
+            <div class="modal-body" id="experienceModalBody"></div>
+        </div>
+    </div>
+
+    <!-- Modal parcours -->
+    <div id="parcoursModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="parcoursModalClose">&times;</span>
+            <div class="modal-body" id="parcoursModalBody"></div>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
