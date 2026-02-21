@@ -172,7 +172,7 @@ const projectsData = {
         description: `
             <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Vue d'ensemble</h3>
             <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
-                Ce projet a été réalisé au cours de ma deuxième année de Master. L'objectif était de concevoir et de comparer plusieurs modèles de classification d'images à partir d'images satellite afin de détecter automatiquement la présence d'éoliennes. Les données sont composées d'images couleur de taille 128 × 128 pixels, réparties en trois ensembles distincts : un jeu d'entraînement, un jeu de validation et un jeu de test. Les images contenant une ou plusieurs éoliennes sont étiquetées <em>target</em>, tandis que les autres sont étiquetées <em>other</em>.
+                L'objectif de ce projet était de concevoir et de comparer plusieurs modèles de classification d'images à partir d'images satellite afin de détecter automatiquement la présence d'éoliennes. Les données sont composées d'images couleur de taille 128 × 128 pixels, réparties en trois ensembles distincts : un jeu d'entraînement, un jeu de validation et un jeu de test. Les images contenant une ou plusieurs éoliennes sont étiquetées <em>target</em>, tandis que les autres sont étiquetées <em>other</em>.
             </p>
 
             <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Prétraitement & augmentation</h3>
