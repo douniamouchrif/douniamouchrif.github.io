@@ -80,6 +80,157 @@ document.querySelectorAll('section, .project-card, .skill-category, .timeline-it
 // ========================================
 
 const projectsData = {
+    6: {
+        title: "Prédiction du churn client",
+        description: `
+        <div style="margin-bottom: 1.5rem;">
+            <a href="https://github.com/douniamouchrif/churn-mlops" target="_blank" rel="noopener noreferrer"
+               style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent-primary); text-decoration: none; font-weight: 500; border: 1px solid var(--accent-primary); padding: 0.4rem 1.2rem; border-radius: 20px; transition: background 0.2s;">
+                <i class="fab fa-github"></i> Voir sur GitHub
+            </a>
+        </div>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+            Ce projet est un projet personnel réalisé sur mon temps libre, visant à construire un pipeline complet de machine learning, de l’exploration des données jusqu’au déploiement d’une API et d’une application interactive.
+        </p>
+
+        <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Présentation du projet</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+            Ce projet construit un système complet de prédiction du churn sur le dataset 
+            <strong>IBM Telco Customer Churn</strong>. Le dataset contient environ 7 000 clients
+            décrits par une vingtaine de variables (données démographiques, informations
+            contractuelles, facturation et services souscrits).
+            <br><br>
+            L'objectif est d'identifier les clients susceptibles de résilier leur contrat 
+            avant qu'ils ne quittent l'opérateur, afin de permettre des actions de 
+            rétention proactives.
+            <br><br>
+            Le modèle est optimisé pour le <strong>recall</strong> : dans ce contexte métier,
+            manquer un churner est plus coûteux que contacter un client qui ne serait finalement
+            pas parti. Une contrainte de <strong>précision ≥ 50 %</strong> est toutefois imposée
+            afin d'éviter de générer trop de faux positifs pour les équipes.
+        </p>
+
+        <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Pipeline de machine learning</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 0.8rem;">
+            Le projet implémente un pipeline complet couvrant les principales étapes du cycle
+            de vie d'un modèle de machine learning :
+        </p>
+
+        <ul style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem; padding-left: 1.5rem;">
+            <li><strong>Prétraitement des données</strong> : nettoyage, gestion des valeurs manquantes et conversion des types</li>
+            <li><strong>Feature engineering</strong> : création de nouvelles variables dérivées des informations existantes</li>
+            <li><strong>Comparaison de modèles</strong> dans un notebook dédié (Logistic Regression, Random Forest, XGBoost, LightGBM, SVM, MLP)</li>
+            <li><strong>Optimisation des hyperparamètres</strong> avec Optuna : 30 trials, validation croisée 4-folds, maximisation de la ROC-AUC</li>
+            <li><strong>Gestion du déséquilibre de classes</strong> via <code>class_weight='balanced'</code></li>
+            <li><strong>Suivi des expérimentations</strong> avec MLflow : métriques, paramètres et artefacts enregistrés pour chaque run</li>
+        </ul>
+
+        <img 
+            src="images/churn_mlflow.png" 
+            alt="MLflow experiment tracking"
+            style="width: 60%; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 8px 20px rgba(0,0,0,0.08);"
+            onerror="this.style.display='none'"
+        >
+
+        <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Optimisation du seuil de décision</h3>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem;">
+        Le seuil de décision est optimisé séparément de l'entraînement du modèle final afin de refléter l'objectif métier.
+        Plutôt que d'utiliser un seuil par défaut de 0.5, celui-ci est calibré pour privilégier la détection des churners.
+        </p>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+        L'objectif est de <strong>maximiser le recall</strong> tout en maintenant une <strong>précision d'au moins 50 %</strong>,
+        afin d'éviter de générer trop de faux positifs.
+        </p>
+
+        <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Résultats</h3>
+
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem;">
+            <div style="background: var(--bg-secondary, #f5f5f5); border-radius: 10px; padding: 1rem; text-align: center;">
+                <div style="font-size: 1.6rem; font-weight: 700; color: var(--accent-primary);">0.839</div>
+                <div style="color: var(--text-secondary); font-size: 0.85rem;">ROC-AUC</div>
+            </div>
+            <div style="background: var(--bg-secondary, #f5f5f5); border-radius: 10px; padding: 1rem; text-align: center;">
+                <div style="font-size: 1.6rem; font-weight: 700; color: var(--accent-primary);">0.810</div>
+                <div style="color: var(--text-secondary); font-size: 0.85rem;">Recall</div>
+            </div>
+            <div style="background: var(--bg-secondary, #f5f5f5); border-radius: 10px; padding: 1rem; text-align: center;">
+                <div style="font-size: 1.6rem; font-weight: 700; color: var(--accent-primary);">0.508</div>
+                <div style="color: var(--text-secondary); font-size: 0.85rem;">Précision</div>
+            </div>
+            <div style="background: var(--bg-secondary, #f5f5f5); border-radius: 10px; padding: 1rem; text-align: center;">
+                <div style="font-size: 1.6rem; font-weight: 700; color: var(--accent-primary);">0.625</div>
+                <div style="color: var(--text-secondary); font-size: 0.85rem;">F1 Score</div>
+            </div>
+        </div>
+
+        <p style="color: var(--text-secondary); font-size: 0.9rem; font-style: italic; margin-bottom: 2rem;">
+            L'accuracy n'est pas mise en avant : sur des données déséquilibrées, cette métrique
+            est trompeuse et peu pertinente par rapport à l'objectif métier.
+        </p>
+
+        <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Application interactive</h3>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem;">
+            Une application <strong>Streamlit</strong> permet d'explorer le modèle et de tester
+            des prédictions sur des profils clients.
+        </p>
+
+        <div class="image-grid" style="margin-bottom: 2rem;">
+            <img src="images/churn_app1.png" alt="Dashboard modèle" onerror="this.style.display='none'">
+            <img src="images/churn_app2.png" alt="Dashboard métriques" onerror="this.style.display='none'">
+        </div>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem;">
+            L'onglet de prédiction permet de remplir un formulaire client et d'obtenir :
+        </p>
+
+        <ul style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem; padding-left: 1.5rem;">
+            <li>la probabilité de churn</li>
+            <li>la prédiction binaire (churn / non-churn)</li>
+            <li>un niveau de risque</li>
+            <li>une explication locale via un graphique SHAP</li>
+        </ul>
+
+        <div class="image-grid" style="margin-bottom: 2rem;">
+            <img src="images/churn_app3.png" alt="Formulaire client" onerror="this.style.display='none'">
+            <img src="images/churn_app4.png" alt="SHAP explanation" onerror="this.style.display='none'">
+        </div>
+
+        <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">API et conteneurisation</h3>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem;">
+            Le modèle est servi via une API <strong>FastAPI</strong> exposant deux endpoints :
+        </p>
+
+        <ul style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem; padding-left: 1.5rem;">
+            <li><code>GET /health</code> : statut de l'API et chargement du modèle</li>
+            <li><code>POST /predict</code> : probabilité de churn, prédiction, seuil utilisé et niveau de risque</li>
+        </ul>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+            L'application est conteneurisée avec <strong>Docker</strong>. Deux images distinctes
+            sont utilisées : une pour l'API et une pour l'application Streamlit. Cette séparation
+            permet de limiter les dépendances de chaque service et de garder des images plus
+            légères et rapides à construire. Les deux services sont orchestrés avec
+            <code>docker-compose</code>.
+        </p>
+
+        <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Stack technique</h3>
+
+        <ul style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem; padding-left: 1.5rem;">
+            <li><strong>ML :</strong> LightGBM, scikit-learn, SHAP</li>
+            <li><strong>Optimisation des hyperparamètres :</strong> Optuna</li>
+            <li><strong>Tracking d’expériences :</strong> MLflow</li>
+            <li><strong>API :</strong> FastAPI + Uvicorn</li>
+            <li><strong>Dashboard :</strong> Streamlit</li>
+            <li><strong>Conteneurisation :</strong> Docker + Docker Compose</li>
+            <li><strong>Langage :</strong> Python 3.11</li>
+        </ul>
+    `,
+    },
     1: {
         title: "Datathon Bordeaux Métropole",
         description: `
